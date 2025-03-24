@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="resources/css/dics.original.css" />
 
     <title>3D Gaussian Splatting as Markov Chain Monte Carlo</title>
+    
     <meta
       property="og:title"
       content="3D Gaussian Splatting as Markov Chain Monte Carlo"
@@ -51,6 +52,9 @@
 
   <body>
     <div class="container">
+      <div class="title">
+        NeurIPS 2024 SPOTLIGHT
+      </div>
       <div class="title">
         3D Gaussian Splatting as Markov Chain Monte Carlo
       </div>
@@ -131,6 +135,26 @@
               <span>Paper</span>
             </a>
           </span>
+          <span class="link-block">
+            <a href="https://arxiv.org/abs/2404.09591" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fa fa-file-o"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <!-- <a href="https://arxiv.org/abs/2404.09591" class="external-link button is-normal is-rounded is-dark"> -->
+            <a
+              href="https://neurips.cc/virtual/2024/poster/94984"
+              class="external-link button is-normal is-rounded is-dark"
+            >
+              <span class="icon">
+                <i class="fa fa-file-o"></i>
+              </span>
+              <span>Video</span>
+            </a>
+          </span>
           <!-- Code Link. -->
           <span class="link-block">
             <a
@@ -165,7 +189,7 @@
         <hr />
       </div>
 
-      <div class="parent-video-compare-container">
+      <div class="parent-video-compare-container" id="trainb">
         <div class="video-compare-container" id="materialsDiv">
           <video
             class="video"
@@ -188,6 +212,18 @@
           the ground texture) providing much higher quality renderings.
         </p>
       </div>
+
+      <script>
+        function isSafari() {
+          return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        }
+        if (isSafari()) {
+          document.getElementById('trainb').innerHTML =
+            `<video class="safari-video" controls autoplay>
+              <source src="./resources/training_rand_compare/bicycle_both-rand.mp4" type="video/mp4" >
+            </video>`;
+        }
+      </script>
 
       <div class="parent-video-compare-container">
         <hr />
